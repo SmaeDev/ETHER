@@ -1,0 +1,10 @@
+packages:
+  - package: dbt-labs/codegen
+    version: 0.14.1
+  - package: dbt-labs/audit_helper
+    version: 0.13.0
+  # - package: windsor-ai/dbt_facebook_ads
+  #   version: 0.0.2
+  - package: dbt-labs/dbt_utils
+    version: 1.3.3
+# sha1_hash: ae969e32018d81cb02104c8f31990806a601070d
