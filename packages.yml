@@ -3,6 +3,7 @@ packages:
     version: 0.14.1
   - package: dbt-labs/audit_helper
     version: 0.13.0
+
   # - package: windsor-ai/dbt_facebook_ads
   #   version: 0.0.2
 
