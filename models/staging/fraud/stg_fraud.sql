@@ -1,3 +1,6 @@
+{{ config(group= 'fraud_risk', access = 'private')}}
+{# {{ config(group: 'analytics_engineering', materialized = 'table')}} #}
+
 select 
     t.from_address,
     c.bytecode,
