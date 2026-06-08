@@ -1,7 +1,7 @@
 select
     address,
     block_number,
-    byte_code,
+    byte_code as bytecode,
     date,
     last_modified
 

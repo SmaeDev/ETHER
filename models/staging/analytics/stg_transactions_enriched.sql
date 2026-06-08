@@ -21,13 +21,13 @@ stg_transactions_enriched AS (
         t.receipt_contract_address,
         t.input,
         tt.token_transfer_count,
-        1 as new_fields
-    case
-        when t.receipt_contract_address != '' then 'contract_creation'
-        when tt.transaction_hash is not null then 'token_transfer'
-        when t.input = '0x' and t.value > 0 then 'plain_eth_transfer'
-        else 'other'
-    end as transaction_category
+        1 as new_fields,
+        case
+            when t.receipt_contract_address != '' then 'contract_creation'
+            when tt.transaction_hash is not null then 'token_transfer'
+            when t.input = '0x' and t.value > 0 then 'plain_eth_transfer'
+            else 'other'
+        end as transaction_category
 
     from {{ ref('stg_transactions')}} t
     -- from {{ source('eth', 'transactions') }} t
@@ -43,4 +43,4 @@ stg_transactions_enriched AS (
 )
 
 select * 
-From transactions_enriched
+From stg_transactions_enriched
