@@ -3,7 +3,7 @@ eth:
     ci:
       account: CJEHXNW-EA87300
       database: CI
-      private_key_path: {{ env_var('DBT_PRIVATE_KEY_PATH') }}
+      private_key_path: "{{ env_var('DBT_PRIVATE_KEY_PATH') }}"
       role: accountadmin
       schema: CI_SCHEMA
       threads: 1
