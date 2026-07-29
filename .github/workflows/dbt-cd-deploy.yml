@@ -2,7 +2,7 @@ name: dbt prod deploy
 
 on:
   push:
-    branches:["master"] # runs after PR merge (push to master)
+    branches: ["master"] # runs after PR merge (push to master)
   workflow_dispatch:
 
 concurrency:
